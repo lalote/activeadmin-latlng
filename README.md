@@ -52,7 +52,7 @@ form do |f|
   f.inputs do
     f.input :lat
     f.input :lng
-    f.latlng lang: :ru, map: :yandex, height: 500, loading_map: false
+    f.latlng lang: :ru, map: :yandex, height: 500, loading_map: false, api_key_env: 'GOOGLE_API_KEY'
   end
   f.actions
 end
