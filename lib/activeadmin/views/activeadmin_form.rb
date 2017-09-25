@@ -9,27 +9,29 @@ module ActiveAdmin
         id_lng = args[:id_lng] || "#{class_name}_lng"
         height = args[:height] || 400
         loading_map = args[:loading_map].nil? ? true : args[:loading_map]
+        api_key = args[:api_key] || (args[:api_key_env] && ENV[args[:api_key_env]]) || ENV['MAP_API_KEY']
 
         case map
         when :yandex
-          insert_tag(YandexMapProxy, form_builder, lang, id_lat, id_lng, height, loading_map)
+          insert_tag(YandexMapProxy, form_builder, lang, id_lat, id_lng, height, loading_map, api_key)
         when :google
-          insert_tag(GoogleMapProxy, form_builder, lang, id_lat, id_lng, height, loading_map)
+          insert_tag(GoogleMapProxy, form_builder, lang, id_lat, id_lng, height, loading_map, api_key)
         else
-          insert_tag(GoogleMapProxy, form_builder, lang, id_lat, id_lng, height, loading_map)
+          insert_tag(GoogleMapProxy, form_builder, lang, id_lat, id_lng, height, loading_map, api_key)
         end
       end
     end
 
     class LatlngProxy < FormtasticProxy
       def build(form_builder, *args, &block)
-        @lang, @id_lat, @id_lng, @height, @loading_map = *args
+        @lang, @id_lat, @id_lng, @height, @loading_map, @api_key = *args
       end
     end
 
     class GoogleMapProxy < LatlngProxy
       def to_s
-        loading_map_code = @loading_map ? "<script src=\"https://maps.googleapis.com/maps/api/js?language=#{@lang}&callback=googleMapObject.init\" async defer></script>" : ''
+        key = @api_key ? "&key=#{@api_key}" : ""
+        loading_map_code = @loading_map ? "<script src=\"https://maps.googleapis.com/maps/api/js?language=#{@lang}#{key}&callback=googleMapObject.init\" async defer></script>" : ''
         "<li>" \
         "#{loading_map_code}" \
         "<div id=\"google_map\" style=\"height: #{@height}px\"></div>" \
@@ -84,6 +86,7 @@ module ActiveAdmin
 
     class YandexMapProxy < LatlngProxy
       def to_s
+        key = @api_key ? "&apikey=#{@api_key}" : ""
         loading_map_code = @loading_map ? "<script src=\"https://api-maps.yandex.ru/2.1/?lang=#{@lang}&load=Map,Placemark\" type=\"text/javascript\"></script>" : ''
         "<li>" \
         "#{loading_map_code}" \
