@@ -9,7 +9,7 @@ module ActiveAdmin
         id_lng = args[:id_lng] || "#{class_name}_lng"
         height = args[:height] || 400
         loading_map = args[:loading_map].nil? ? true : args[:loading_map]
-        api_key = args[:api_key] || (args[:api_key_env] && ENV[args[:api_key_env]]) || ENV['MAP_API_KEY']
+        api_key = args[:api_key] || (args[:api_key_env] && ENV[args[:api_key_env]])
 
         case map
         when :yandex
