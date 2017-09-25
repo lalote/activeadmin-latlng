@@ -41,6 +41,10 @@ end
 
 * `loading_map` - loading map library. `true` by default. Set to `false`, if map loaded in other place.
 
+* `api_key` - you can send api key to map. WARNING! This is unsafe method, better use ENV-variable.
+
+* `api_key_env` - you can send name of ENV-variable where storing API key for map.
+
 ### Example
 
 ```ruby
