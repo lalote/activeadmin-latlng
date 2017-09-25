@@ -6,7 +6,7 @@
 
 Active Admin latitude and longitude plugin
 
-![alt tag](https://image.ibb.co/gHov65/aa_latlng.png)
+![alt tag](https://image.ibb.co/n5vQ65/aa_latlng.jpg)
 
 
 
