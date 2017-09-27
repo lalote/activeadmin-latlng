@@ -45,11 +45,11 @@ end
 
 * `api_key_env` - you can send name of ENV-variable where storing API key for map.
 
-* `default_lat` - default latitude for placemark.
+* `default_lat` - default latitude for placemark, Moscow latitude by default.
 
-* `default_lng` - default longitude for placemark.
+* `default_lng` - default longitude for placemark, Moscow longitude by default.
 
-* `map_zoom` - default zoom for map.
+* `map_zoom` - default zoom for map, `12` by default.
 
 ### Example
 
