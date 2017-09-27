@@ -45,6 +45,12 @@ end
 
 * `api_key_env` - you can send name of ENV-variable where storing API key for map.
 
+* `default_lat` - default latitude for placemark.
+
+* `default_lng` - default longitude for placemark.
+
+* `map_zoom` - default zoom for map.
+
 ### Example
 
 ```ruby
