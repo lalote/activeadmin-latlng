@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    activeadmin_latlng (1.1.0)
+    activeadmin_latlng (1.2.0)
       activeadmin
 
 GEM
@@ -114,18 +114,18 @@ GEM
     jquery-ui-rails (6.0.1)
       railties (>= 3.2.16)
     json (2.1.0)
-    kaminari (1.0.1)
+    kaminari (1.1.0)
       activesupport (>= 4.1.0)
-      kaminari-actionview (= 1.0.1)
-      kaminari-activerecord (= 1.0.1)
-      kaminari-core (= 1.0.1)
-    kaminari-actionview (1.0.1)
+      kaminari-actionview (= 1.1.0)
+      kaminari-activerecord (= 1.1.0)
+      kaminari-core (= 1.1.0)
+    kaminari-actionview (1.1.0)
       actionview
-      kaminari-core (= 1.0.1)
-    kaminari-activerecord (1.0.1)
+      kaminari-core (= 1.1.0)
+    kaminari-activerecord (1.1.0)
       activerecord
-      kaminari-core (= 1.0.1)
-    kaminari-core (1.0.1)
+      kaminari-core (= 1.1.0)
+    kaminari-core (1.1.0)
     listen (3.0.8)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -206,7 +206,7 @@ GEM
       rspec-mocks (~> 3.6.0)
       rspec-support (~> 3.6.0)
     rspec-support (3.6.0)
-    sass (3.5.1)
+    sass (3.5.2)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
       rb-fsevent (~> 0.9, >= 0.9.4)
