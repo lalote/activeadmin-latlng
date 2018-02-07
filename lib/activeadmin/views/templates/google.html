@@ -5,6 +5,7 @@
     var googleMapObject = {
       idLat: '%s',
       idLng: '%s',
+      idLatLng: '%s',
       coords: null,
       map: null,
       marker: null,
@@ -20,6 +21,8 @@
       saveCoordinates: function() {
         $("#" + googleMapObject.idLat).val( googleMapObject.coords.lat.toFixed(10) );
         $("#" + googleMapObject.idLng).val( googleMapObject.coords.lng.toFixed(10) );
+        $("#" + googleMapObject.idLatLng).val(googleMapObject.coords.lat.toFixed(10) +','+ 
+                                              googleMapObject.coords.lng.toFixed(10) );
       },
 
       init: function() {
