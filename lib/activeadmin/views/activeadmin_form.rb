@@ -7,6 +7,7 @@ module ActiveAdmin
         map    = args[:map]    || :google
         id_lat = args[:id_lat] || "#{class_name}_lat"
         id_lng = args[:id_lng] || "#{class_name}_lng"
+        id_latlng = args[:id_latlng] || "#{class_name}_latlng"
         height = args[:height] || 400
         loading_map = args[:loading_map] || true
         api_key = args[:api_key] || (args[:api_key_env] && ENV[args[:api_key_env]])
